@@ -7,5 +7,5 @@ You Can Check this in live Hosting from Netlify
 Check it on Laptop/Desktop for better experience 
 
 B Jyothiradhithya
-7207180221
-adhithyaborigi@gmail.com
+Ph:7207180221
+Gmail:adhithyaborigi@gmail.com
