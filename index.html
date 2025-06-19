@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Branding Kit Demo | The Agency</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .ripple-bg {
+      background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 80%);
+      animation: ripple 6s infinite;
+    }
+    @keyframes ripple {
+      0% { background-size: 0% 0%; }
+      50% { background-size: 200% 200%; }
+      100% { background-size: 0% 0%; }
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    .scroll-indicator {
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(-20px);}
+      60% {transform: translateY(-10px);}
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans scroll-smooth">
+  <video autoplay muted loop class="fixed top-0 left-0 w-full h-full object-cover z-[-1] opacity-30">
+    <source src="striking - any simple object can be used (1).mp4" type="video/mp4">
+  </video>
+
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-90 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="flex-shrink-0 flex items-center">
+          <span class="text-xl font-bold gradient-text">The Agency</span>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition">Home</a>
+            <a href="#features" class="px-3 py-2 rounded-md text-sm font-medium hover:text-purple-400 transition">Features</a>
+            <a href="#brandkits" class="px-3 py-2 rounded-md text-sm font-medium hover:text-pink-400 transition">Brand Kits</a>
+            <a href="#animations" class="px-3 py-2 rounded-md text-sm font-medium hover:text-indigo-400 transition">Animations</a>
+          </div>
+        </div>
+        <button class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="relative w-full h-screen overflow-hidden">
+    <video autoplay muted loop class="absolute w-full h-full object-cover">
+      <source src="homepage.mp4" type="video/mp4">
+    </video>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full bg-black bg-opacity-50 px-4">
+      <h1 class="text-5xl md:text-7xl font-bold text-center mb-6 gradient-text">Transform Your Brand</h1>
+      <p class="text-xl md:text-2xl text-center max-w-3xl mb-8">Crafting unforgettable brand experiences through innovative design and strategic thinking</p>
+      <div class="flex gap-4">
+        <button class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-medium transition transform hover:scale-105">
+          Get Started
+        </button>
+        <button class="border border-white hover:bg-white hover:text-gray-900 px-6 py-3 rounded-full font-medium transition transform hover:scale-105">
+          Learn More
+        </button>
+      </div>
+      <div class="absolute bottom-10 scroll-indicator">
+        <i class="fas fa-chevron-down text-2xl animate-bounce"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section id="features" class="p-10 md:p-20 ripple-bg">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-semibold mb-6 text-center gradient-text">Our Features</h2>
+      <p class="text-center max-w-3xl mx-auto mb-12 text-gray-300">Discover how we can elevate your brand with our comprehensive suite of services</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-gray-800 p-6 rounded-xl card-hover">
+          <div class="text-blue-400 text-3xl mb-4">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Brand Identity</h3>
+          <p class="text-gray-300">Comprehensive logo design, color palettes, typography systems and visual language development.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl card-hover">
+          <div class="text-purple-400 text-3xl mb-4">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Digital Presence</h3>
+          <p class="text-gray-300">Website design, social media templates, and digital marketing assets tailored to your brand.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl card-hover">
+          <div class="text-pink-400 text-3xl mb-4">
+            <i class="fas fa-box-open"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Packaging</h3>
+          <p class="text-gray-300">Stunning product packaging that tells your brand story and creates shelf impact.</p>
+        </div>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <video controls class="w-full rounded-lg shadow-lg">
+          <source src="features-services.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND KITS CARDS -->
+  <section id="brandkits" class="p-10 md:p-20 bg-gray-800">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-semibold mb-6 text-center gradient-text">Brand Kits</h2>
+      <p class="text-center max-w-3xl mx-auto mb-12 text-gray-300">Everything you need to maintain brand consistency across all platforms</p>
+      
+      <div class="flex justify-center mb-12">
+        <img src="stats.png" alt="Brand Kit Cards" class="rounded-xl shadow-lg w-full max-w-3xl card-hover">
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-gray-900 p-6 rounded-xl card-hover">
+          <h3 class="text-xl font-semibold mb-4">What's Included</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+              <span>Logo variations (primary, secondary, monochrome)</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+              <span>Color palette with HEX/RGB values</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+              <span>Typography system guidelines</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+              <span>Brand voice and messaging framework</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-xl card-hover">
+          <h3 class="text-xl font-semibold mb-4">Delivery Formats</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-file-pdf text-red-400 mt-1 mr-2"></i>
+              <span>PDF Brand Guidelines Document</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-folder-open text-yellow-400 mt-1 mr-2"></i>
+              <span>Source Files (AI, PSD, EPS)</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-cloud text-blue-400 mt-1 mr-2"></i>
+              <span>Cloud Storage Access</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-mobile-alt text-purple-400 mt-1 mr-2"></i>
+              <span>Mobile-Optimized Assets</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAROUSEL / ANIMATION -->
+  <section id="animations" class="p-10 md:p-20 bg-gray-900">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-semibold mb-6 text-center gradient-text">Animations</h2>
+      <p class="text-center max-w-3xl mx-auto mb-12 text-gray-300">Bring your brand to life with dynamic motion graphics and interactive elements</p>
+      
+      <div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-12">
+        <video class="w-full md:w-1/2 rounded-lg card-hover" autoplay loop muted>
+          <source src="carousel switch.mp4" type="video/mp4">
+        </video>
+        <video class="w-full md:w-1/2 rounded-lg card-hover" autoplay loop muted>
+          <source src="parallax animation.mp4" type="video/mp4">
+        </video>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-gray-800 p-6 rounded-xl card-hover">
+          <h3 class="text-xl font-semibold mb-4">Micro-Interactions</h3>
+          <p class="text-gray-300">Subtle animations that enhance user experience and guide interactions.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl card-hover">
+          <h3 class="text-xl font-semibold mb-4">Logo Animations</h3>
+          <p class="text-gray-300">Bring your logo to life with elegant motion that reinforces brand identity.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl card-hover">
+          <h3 class="text-xl font-semibold mb-4">UI Transitions</h3>
+          <p class="text-gray-300">Smooth, purposeful animations that make digital experiences feel intuitive.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="p-10 md:p-20 bg-gradient-to-r from-blue-900 to-purple-900">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-semibold mb-12 text-center">What Our Clients Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 rounded-full bg-blue-400 mr-4"></div>
+            <div>
+              <h4 class="font-semibold">Sarah Johnson</h4>
+              <p class="text-sm text-gray-300">CEO, TechStart</p>
+            </div>
+          </div>
+          <p class="text-gray-200">"The Agency completely transformed our brand identity. Their attention to detail and creative vision resulted in a cohesive brand system that resonates with our audience."</p>
+        </div>
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 rounded-full bg-purple-400 mr-4"></div>
+            <div>
+              <h4 class="font-semibold">Michael Chen</h4>
+              <p class="text-sm text-gray-300">Marketing Director, UrbanEats</p>
+            </div>
+          </div>
+          <p class="text-gray-200">"Working with The Agency was seamless. They delivered a comprehensive brand kit that our entire team can use consistently across all platforms and materials."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="p-10 md:p-20 bg-gray-900">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-5xl font-semibold mb-6 gradient-text">Ready to Elevate Your Brand?</h2>
+      <p class="text-xl mb-8 text-gray-300">Let's create something extraordinary together</p>
+      <button class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-4 rounded-full font-medium text-lg transition transform hover:scale-105">
+        Get Your Brand Kit Today
+      </button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="p-10 bg-gray-800">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-4 gradient-text">The Agency</h3>
+          <p class="text-gray-300">Crafting memorable brand experiences through strategic design and innovation.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Services</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-300 hover:text-blue-400 transition">Brand Strategy</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-blue-400 transition">Visual Identity</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-blue-400 transition">Digital Design</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-blue-400 transition">Packaging</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Company</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-300 hover:text-blue-400 transition">About Us</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-blue-400 transition">Our Work</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-blue-400 transition">Careers</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-blue-400 transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Connect</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-blue-400 text-xl transition"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-300 hover:text-pink-500 text-xl transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-300 hover:text-blue-600 text-xl transition"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-gray-300 hover:text-red-500 text-xl transition"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-6 border-t border-gray-700 text-center text-gray-400">
+        <p>&copy; 2025 The Agency — Crafted with creativity <span class="gradient-text">✨</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    
+    // Mobile menu toggle functionality would go here
+    // You would need to add the mobile menu HTML structure and this JS would control it
+  </script>
+
+  <style>
+    .hover-img {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hover-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+  </style>
+
+  <div class="p-10 bg-gray-900 text-center">
+    <h2 class="text-2xl font-semibold mb-4">Our Toolkit in Action</h2>
+    <img src="Screenshot 2025-06-19 152424.png" alt="Brand Kit Preview" class="mx-auto rounded-xl hover-img w-full max-w-md">
+  </div>
+</body>
+</html>
+
+
